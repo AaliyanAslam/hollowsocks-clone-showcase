@@ -52,6 +52,12 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+				hollow: {
+					green: 'hsl(var(--hollow-green))',
+					orange: 'hsl(var(--hollow-orange))',
+					dark: 'hsl(var(--hollow-dark))',
+					light: 'hsl(var(--hollow-light))'
+				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',

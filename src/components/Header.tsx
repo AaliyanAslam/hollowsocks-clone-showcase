@@ -10,6 +10,9 @@ const Header = () => {
       {/* Sale Banner */}
       <div className="bg-hollow-orange text-hollow-light py-2 px-4 text-center font-bold text-sm">
         🔥 HEAT ADVISORY SALE! BUY 3 GET 3 FREE
+        <div className="mt-1 text-xs">
+          SALE ENDS SOON: <span className="font-mono">00HR 00MIN 00SEC</span>
+        </div>
       </div>
       
       {/* Main Header */}
@@ -33,6 +36,9 @@ const Header = () => {
             </a>
             <a href="#" className="text-foreground hover:text-hollow-green transition-colors font-medium">
               SHOP BY ACTIVITY
+            </a>
+            <a href="#" className="text-foreground hover:text-hollow-green transition-colors font-medium">
+              RETURNS & EXCHANGES
             </a>
           </nav>
           
@@ -72,6 +78,9 @@ const Header = () => {
               </a>
               <a href="#" className="text-foreground hover:text-hollow-green transition-colors font-medium">
                 SHOP BY ACTIVITY
+              </a>
+              <a href="#" className="text-foreground hover:text-hollow-green transition-colors font-medium">
+                RETURNS & EXCHANGES
               </a>
             </div>
           </nav>

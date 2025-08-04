@@ -1,6 +1,10 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import starterBundle from "@/assets/starter-bundle.jpg";
+import noShowBundle from "@/assets/no-show-bundle.jpg";
+import crewBundle from "@/assets/crew-bundle.jpg";
+import compressionSocks from "@/assets/compression-socks.jpg";
 
 const ProductSection = () => {
   const [activeTab, setActiveTab] = useState("best-sellers");
@@ -14,7 +18,7 @@ const ProductSection = () => {
       pricePerPair: "($17.99/pair)",
       badge: "BUY 3 GET 3 FREE",
       description: "2 Crew, 2 Ankle, 2 No-Show Socks. All for 50% Off + Free Shipping.",
-      image: "/api/placeholder/300/300"
+      image: starterBundle
     },
     {
       id: 2,
@@ -24,7 +28,7 @@ const ProductSection = () => {
       pricePerPair: "($14.99/pair)",
       badge: "BUY 3 GET 3 FREE",
       description: "Low cut style, perfect for everyday wear.",
-      image: "/api/placeholder/300/300"
+      image: noShowBundle
     },
     {
       id: 3,
@@ -34,7 +38,7 @@ const ProductSection = () => {
       pricePerPair: "($19.99/pair)",
       badge: "BUY 3 GET 3 FREE",
       description: "Light compression, a classic crew style sock elevated.",
-      image: "/api/placeholder/300/300"
+      image: crewBundle
     },
     {
       id: 4,
@@ -44,7 +48,7 @@ const ProductSection = () => {
       pricePerPair: "($14.99/pair)",
       badge: "TARGETED COMPRESSION",
       description: "FOR ALL-DAY COMFORT.",
-      image: "/api/placeholder/300/300"
+      image: compressionSocks
     }
   ];
 
@@ -57,7 +61,7 @@ const ProductSection = () => {
       pricePerPair: "($24.99/pair)",
       badge: "BEST VALUE",
       description: "Everything you need for any activity.",
-      image: "/api/placeholder/300/300"
+      image: starterBundle
     }
   ];
 
@@ -102,11 +106,12 @@ const ProductSection = () => {
           {currentProducts.map((product) => (
             <Card key={product.id} className="overflow-hidden border-border hover:shadow-lg transition-shadow">
               <div className="relative">
-                <div className="aspect-square bg-muted">
-                  {/* Placeholder for product image */}
-                  <div className="w-full h-full bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center">
-                    <span className="text-gray-400 text-sm">Product Image</span>
-                  </div>
+                <div className="aspect-square bg-muted overflow-hidden rounded-t-lg">
+                  <img 
+                    src={product.image} 
+                    alt={product.name}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
                 
                 {/* Sale Badge */}
